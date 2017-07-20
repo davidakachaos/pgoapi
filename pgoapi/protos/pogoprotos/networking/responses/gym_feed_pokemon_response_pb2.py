@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='pogoprotos/networking/responses/gym_feed_pokemon_response.proto',
   package='pogoprotos.networking.responses',
   syntax='proto3',
-  serialized_pb=_b('\n?pogoprotos/networking/responses/gym_feed_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\x1a-pogoprotos/data/badge/awarded_gym_badge.proto\x1a\x32pogoprotos/data/gym/gym_status_and_defenders.proto\x1a(pogoprotos/enums/pokemon_family_id.proto\"\xb6\x05\n\x16GymFeedPokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.pogoprotos.networking.responses.GymFeedPokemonResponse.Result\x12L\n\x18gym_status_and_defenders\x18\x02 \x01(\x0b\x32*.pogoprotos.data.gym.GymStatusAndDefenders\x12\x39\n\tgym_badge\x18\x03 \x01(\x0b\x32&.pogoprotos.data.badge.AwardedGymBadge\x12\x18\n\x10stardust_awarded\x18\x04 \x01(\x05\x12\x12\n\nxp_awarded\x18\x05 \x01(\x05\x12\x19\n\x11num_candy_awarded\x18\x06 \x01(\x05\x12:\n\x0f\x63\x61ndy_family_id\x18\x07 \x01(\x0e\x32!.pogoprotos.enums.PokemonFamilyId\x12\x19\n\x11\x63ooldown_complete\x18\x08 \x01(\x03\"\xa2\x02\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\x12\x1b\n\x17\x45RROR_POKEMON_NOT_THERE\x10\x04\x12\x16\n\x12\x45RROR_POKEMON_FULL\x10\x05\x12\x19\n\x15\x45RROR_NO_BERRIES_LEFT\x10\x06\x12\x14\n\x10\x45RROR_WRONG_TEAM\x10\x07\x12\x15\n\x11\x45RROR_WRONG_COUNT\x10\x08\x12\x12\n\x0e\x45RROR_TOO_FAST\x10\t\x12\x16\n\x12\x45RROR_TOO_FREQUENT\x10\n\x12\x12\n\x0e\x45RROR_GYM_BUSY\x10\x0b\x12\x15\n\x11\x45RROR_RAID_ACTIVE\x10\x0c\x62\x06proto3')
+  serialized_pb=_b('\n?pogoprotos/networking/responses/gym_feed_pokemon_response.proto\x12\x1fpogoprotos.networking.responses\x1a-pogoprotos/data/badge/awarded_gym_badge.proto\x1a\x32pogoprotos/data/gym/gym_status_and_defenders.proto\x1a(pogoprotos/enums/pokemon_family_id.proto\"\xcc\x05\n\x16GymFeedPokemonResponse\x12N\n\x06result\x18\x01 \x01(\x0e\x32>.pogoprotos.networking.responses.GymFeedPokemonResponse.Result\x12L\n\x18gym_status_and_defenders\x18\x02 \x01(\x0b\x32*.pogoprotos.data.gym.GymStatusAndDefenders\x12\x39\n\tgym_badge\x18\x03 \x01(\x0b\x32&.pogoprotos.data.badge.AwardedGymBadge\x12\x18\n\x10stardust_awarded\x18\x04 \x01(\x05\x12\x12\n\nxp_awarded\x18\x05 \x01(\x05\x12\x19\n\x11num_candy_awarded\x18\x06 \x01(\x05\x12:\n\x0f\x63\x61ndy_family_id\x18\x07 \x01(\x0e\x32!.pogoprotos.enums.PokemonFamilyId\x12\x19\n\x11\x63ooldown_complete\x18\x08 \x01(\x03\"\xb8\x02\n\x06Result\x12\t\n\x05UNSET\x10\x00\x12\x0b\n\x07SUCCESS\x10\x01\x12\x14\n\x10\x45RROR_CANNOT_USE\x10\x02\x12\x16\n\x12\x45RROR_NOT_IN_RANGE\x10\x03\x12\x1b\n\x17\x45RROR_POKEMON_NOT_THERE\x10\x04\x12\x16\n\x12\x45RROR_POKEMON_FULL\x10\x05\x12\x19\n\x15\x45RROR_NO_BERRIES_LEFT\x10\x06\x12\x14\n\x10\x45RROR_WRONG_TEAM\x10\x07\x12\x15\n\x11\x45RROR_WRONG_COUNT\x10\x08\x12\x12\n\x0e\x45RROR_TOO_FAST\x10\t\x12\x16\n\x12\x45RROR_TOO_FREQUENT\x10\n\x12\x12\n\x0e\x45RROR_GYM_BUSY\x10\x0b\x12\x15\n\x11\x45RROR_RAID_ACTIVE\x10\x0c\x12\x14\n\x10\x45RROR_GYM_CLOSED\x10\rb\x06proto3')
   ,
   dependencies=[pogoprotos_dot_data_dot_badge_dot_awarded__gym__badge__pb2.DESCRIPTOR,pogoprotos_dot_data_dot_gym_dot_gym__status__and__defenders__pb2.DESCRIPTOR,pogoprotos_dot_enums_dot_pokemon__family__id__pb2.DESCRIPTOR,])
 
@@ -86,11 +86,15 @@ _GYMFEEDPOKEMONRESPONSE_RESULT = _descriptor.EnumDescriptor(
       name='ERROR_RAID_ACTIVE', index=12, number=12,
       options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='ERROR_GYM_CLOSED', index=13, number=13,
+      options=None,
+      type=None),
   ],
   containing_type=None,
   options=None,
   serialized_start=646,
-  serialized_end=936,
+  serialized_end=958,
 )
 _sym_db.RegisterEnumDescriptor(_GYMFEEDPOKEMONRESPONSE_RESULT)
 
@@ -172,7 +176,7 @@ _GYMFEEDPOKEMONRESPONSE = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=242,
-  serialized_end=936,
+  serialized_end=958,
 )
 
 _GYMFEEDPOKEMONRESPONSE.fields_by_name['result'].enum_type = _GYMFEEDPOKEMONRESPONSE_RESULT
